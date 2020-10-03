@@ -37,6 +37,7 @@ services:
       - /usr/src/app/node_modules
     depends_on:
       - server
+    env_file: ./frontend/.env_docker
     ports:
       - "3000:3000"
     networks:
