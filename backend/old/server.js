@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+const router = express.Router();
 const bodyParser = require('body-parser');
 const cors = require('cors');
 
@@ -12,9 +13,9 @@ app.use(cors());
 app.use(bodyParser.json());
 
 // will redirect all the non-api routes to react frontend
-/*app.use(function(req, res) {
+router.use(function(req, res) {
     res.sendFile(path.join(__dirname, '../client','build','index.html'));
-});*/
+});
 
 app.get('/', (req, res) => {
     res.send("Hello World ! ");

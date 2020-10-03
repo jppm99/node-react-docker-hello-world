@@ -6,7 +6,7 @@ services:
       context: ./backend
       dockerfile: Dockerfile
     image: server
-    command: /usr/src/app/node_modules/.bin/nodemon server.js
+    command: /usr/src/app/node_modules/.bin/nodemon ./bin/www
     volumes:
       - ./backend/:/usr/src/app
       - /usr/src/app/node_modules
@@ -14,7 +14,7 @@ services:
       - "8080:8080"
     depends_on:
       - mongo
-    env_file: ./backend/.env_production
+    env_file: ./backend/.env_docker
     networks:
       - app-network
   mongo:

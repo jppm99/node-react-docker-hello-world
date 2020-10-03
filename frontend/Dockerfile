@@ -6,12 +6,14 @@ FROM node:12.18.4-alpine3.12
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 
-# Install Dependencies
-COPY package*.json ./
-RUN npm ci
-
 # Copy app source code
 COPY . .
+
+# Rename package-docker.json to package.json
+RUN mv -f ./package-docker.json ./package.json
+RUN cat package.json && ls -la
+
+RUN npm ci
 
 # Expose client
 EXPOSE 3000
