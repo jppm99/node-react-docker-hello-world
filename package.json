@@ -1,0 +1,31 @@
+{
+  "name": "ldso",
+  "version": "1.0.0",
+  "description": "Happiness meter: https://docs.google.com/spreadsheets/d/1YLGxh-7tNMnYzdy2Ox2HrvwsjSwqAbe6Ld6D2iQ6ezU/edit?invite=CJma8e4N&ts=5f734d1a#gid=0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "concurrently \"cd backend && npm run dev\" \"cd frontend && npm start\" ",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/feup-tbs/ldso2021/t2g1.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/feup-tbs/ldso2021/t2g1/issues"
+  },
+  "homepage": "https://gitlab.com/feup-tbs/ldso2021/t2g1#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "chalk": "^4.1.0",
+    "concurrently": "^5.3.0",
+    "express": "^4.17.1",
+    "winston": "^3.3.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
